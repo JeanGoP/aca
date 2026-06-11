@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Validador de Pregunta Problema</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace" aria-labelledby="main-title">
+        <div class="title-block">
+          <p class="eyebrow">Modulo de prueba en vivo</p>
+          <h1 id="main-title">Validador de Pregunta en Tiempo Real</h1>
+          <p class="subtitle">
+            Evalua si una pregunta problema cumple los 5 criterios: verbo, empresa o area,
+            dato real, causa raiz y conexion con la asignatura.
+          </p>
+        </div>
+
+        <div class="example-bar" aria-label="Ejemplos por sector">
+          <button class="example-button restaurant" data-example="restaurant">Sector Alimentos</button>
+          <button class="example-button fashion" data-example="fashion">Sector Moda</button>
+          <button class="example-button factory" data-example="factory">Sector Produccion</button>
+          <button class="example-button logistics" data-example="logistics">Sector Logistica</button>
+          <button class="example-button ecommerce" data-example="ecommerce">Sector E-commerce</button>
+          <button class="clear-button" id="clearInput" type="button">Limpiar</button>
+        </div>
+
+        <section class="validator-panel" aria-label="Validador">
+          <label class="input-label" for="questionInput">Escribe o edita la pregunta problematica aqui:</label>
+          <textarea id="questionInput" spellcheck="true"></textarea>
+
+          <div class="analysis-box">
+            <div class="box-label">Analisis de resaltado visual</div>
+            <div id="highlightedQuestion" class="highlight-output" aria-live="polite"></div>
+          </div>
+
+          <div class="criteria-grid" id="criteriaGrid" aria-live="polite"></div>
+        </section>
+
+        <section class="result-panel" id="resultPanel" aria-live="polite"></section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
