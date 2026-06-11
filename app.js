@@ -67,11 +67,11 @@ const criteria = [
     markClass: 'cause',
     icon: 'C',
     test(text, normalized) {
-      return /\b(debido a|causad[ao] por|por la falta de|por falta de|porque|ya que|dado que|a causa de|mitigando|asociad[ao] a)\b/.test(normalized);
+      return /\b(debido a|causad[ao] por|por la falta de|por falta de|porque|ya que|dado que|a causa de|mitigando|asociad[ao]s? a)\b/.test(normalized);
     },
     find(text) {
       return findFirst(text, [
-        /\b(debido a|causad[ao] por|por la falta de|por falta de|porque|ya que|dado que|a causa de|mitigando|asociad[ao] a)\b(?:\s+\S+){0,8}/i
+        /\b(debido a|causad[ao] por|por la falta de|por falta de|porque|ya que|dado que|a causa de|mitigando|asociad[ao]s? a)\b(?:\s+\S+){0,8}/i
       ]);
     }
   },
